@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+
+    
+
+
+ <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="">Home</a>
+
+    <!-- Adding a search form -->
+    <div class="col-sm-4 col-md-4 navbar-right">
+      <form class="navbar-form" role="search" action="{% url 'search_results'%}">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Article" name="article">
+        </div>
+          <div class="input-group-btn">
+            <button class="btn btn-danger" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+       
+      </form>
+    </div>
+    <!-- end  search form -->
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="navbar-brand" href="{% url 'newsToday' %}">The Moringa Tribune</a>
+        </li>
+        <li class="nav-item">
+            <a class="navbar-brand" href="/archives/2019-12-1">Past News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>
